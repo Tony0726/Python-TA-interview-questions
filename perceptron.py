@@ -12,8 +12,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from keras.activations import sigmoid
 
-linearSeparableFlag = True
-x_bias = 10
+linearSeparableFlag = True #因为感知机是二分类线性模型，不能解决异或问题。可以通过增加隐藏层来解决。
+x_bias = 0 #样本右移后经过Sigmoid激活函数后会导致差距缩小，所以效果变差。
 
 def toy_2D_samples(x_bias ,linearSeparableFlag):
     if linearSeparableFlag:
